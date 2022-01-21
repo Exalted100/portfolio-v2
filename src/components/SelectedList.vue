@@ -5,9 +5,7 @@
                 {{ item.title }}
             </a>
         </h3>
-        <p>
-            {{ item.description }}
-        </p>
+        <p v-html="item.description"></p>
     </div>
 </template>
 
@@ -26,7 +24,7 @@ h3 {
 }
 
 a {
-    color: black;
+    color: inherit;
     text-decoration: none;
 }
 

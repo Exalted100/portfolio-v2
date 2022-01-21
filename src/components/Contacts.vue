@@ -13,20 +13,22 @@ export default {
 p {
     display: inline-block;
     margin-right: 20px;
-    background: linear-gradient(180deg, #FFD2A8 50%, #00FFFF 50%);
-    transition: ease-in background-color 0.4s;
 }
 
-p:hover {
-    background: #00FFFF;
-}
 
 a {
     color: black;
     text-decoration: none;
+    background: linear-gradient(180deg, #FFD2A8 50%, #00FFFF 50%);
+    transition: ease-in background-color 0.4s;
 }
 
 a:hover {
-    color: #00555A;
+    background: #00FFFF;
 }
+
+a:active {
+    background-color: none;
+}
+
 </style>

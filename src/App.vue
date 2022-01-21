@@ -1,21 +1,24 @@
 <template>
-  <Title title="Fawaz Haroun" />
-  <p>
-    I’m a web developer in Lagos, Nigeria, with a passion for smooth and easy to use UIs. Some things I like to do are reading, writing, drawing (bad art), and learning things that momentarily catch my interest. I strongly believe in growth - and putting yourself in positions that force growth. Much like learning to swim by jumping into water or learning to drive by grabbing a steering wheel, after preparing your best to avoid drowning or crashing. George Brecht said “the whole universe interests me”. I share the sentiment, except that I have realized building things interests me above all.
-  </p>
+  <div class="app-container" v-bind:style="modeObject">
+    <p class="modeToggle" v-on:click="changeMode">{{ modeIcon }}</p>
+    <Title title="Fawaz Haroun" />
+    <p>
+      I’m a web developer in Lagos, Nigeria, with a passion for smooth and easy to use UIs. Some things I like to do are reading, writing, drawing (bad art), and learning things that momentarily catch my interest. I strongly believe in growth - and putting yourself in positions that force growth. Much like learning to swim by jumping into water or learning to drive by grabbing a steering wheel, after preparing your best to avoid drowning or crashing. George Brecht said “the whole universe interests me”. I share the sentiment, except that I have realized building things interests me above all.
+    </p>
 
-  <Title title="Selected Works" />
-  <SelectedList v-for="item in works" v-bind:item="item" v-bind:key="item.link" />
+    <Title title="Selected Works" />
+    <SelectedList v-for="item in works" v-bind:item="item" v-bind:key="item.link" />
 
-  <Title title="Selected Articles" />
-  <SelectedList v-for="item in articles" v-bind:item="item" v-bind:key="item.link" />
+    <Title title="Selected Articles" />
+    <SelectedList v-for="item in articles" v-bind:item="item" v-bind:key="item.link" />
 
-  <Title title="Contact me" />
-  <Contacts v-for="contact in contacts" v-bind:contact="contact" v-bind:key="contact.link" />
+    <Title title="Contact me" />
+    <Contacts v-for="contact in contacts" v-bind:contact="contact" v-bind:key="contact.link" />
 
-  <p id="copyright">
-    &#169; Fawaz Haroun, {{ new Date().getFullYear() }}
-  </p>
+    <p id="copyright">
+      &#169; Fawaz Haroun, {{ new Date().getFullYear() }}
+    </p>
+  </div>
 </template>
 
 <script>
@@ -37,7 +40,18 @@ export default {
     return {
       works: works,
       articles: articles,
-      contacts: contacts
+      contacts: contacts,
+      modeObject: {
+        backgroundColor: "#FFD2A8",
+        color: "black"
+      },
+      modeIcon: "🌚"
+    }
+  },
+  methods: {
+    changeMode() {
+      JSON.stringify(this.modeObject) === JSON.stringify({backgroundColor: "#FFD2A8", color: "black"}) ? this.modeIcon = "🌝" : this.modeIcon = "🌚"
+      JSON.stringify(this.modeObject) === JSON.stringify({backgroundColor: "#FFD2A8", color: "black"}) ? this.modeObject = {backgroundColor: "rgb(32, 32, 32)", color: "rgb(226, 226, 226)"} : this.modeObject = {backgroundColor: "#FFD2A8", color: "black"}
     }
   }
 }
@@ -64,9 +78,19 @@ export default {
   font-family: Raleway, Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.app-container {
   text-align: left;
-  background-color: #FFD2A8;
   padding: 0 50px;
+  padding-top: 100px;
+  transition: background-color ease-in 0.5s;
+}
+
+.modeToggle {
+  text-align: right;
+  font-size: 45px;
+  cursor: pointer;
 }
 
 p {
@@ -78,8 +102,23 @@ p {
 }
 
 @media only screen and (max-width: 600px) {
-  #app {
+  #app-container {
     padding: 0 20px
   }
+}
+
+.referrals {
+    color: black;
+    text-decoration: none;
+    background: linear-gradient(180deg, #FFD2A8 50%, #00FFFF 50%);
+    transition: ease-in background-color 0.4s;
+}
+
+.referrals:hover {
+    background: #00FFFF;
+}
+
+.referrals:active {
+    background-color: none;
 }
 </style>

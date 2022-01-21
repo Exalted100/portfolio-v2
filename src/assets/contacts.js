@@ -1,31 +1,31 @@
 const contacts = [
     {
         title: "Twitter",
-        link: ""
+        link: "https://twitter.com/Exalted100"
     },
     {
         title: "Github",
-        link: ""
+        link: "https://github.com/Exalted100"
     },
     {
         title: "LinkedIn",
-        link: ""
+        link: "https://www.linkedin.com/in/fawaz-haroun-5b3a45178"
     },
     {
         title: "Substack",
-        link: ""
+        link: "https://dropoflife.substack.com/"
     },
     {
         title: "Medium",
-        link: ""
+        link: "https://exalted100.medium.com/"
     },
     {
         title: "Email",
-        link: ""
+        link: "mailto:harounayomikun@gmail.com"
     },
     {
         title: "Resume",
-        link: ""
+        link: "/Fawaz-Haroun.pdf"
     }
 ]
 
