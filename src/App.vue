@@ -83,7 +83,6 @@ export default {
 .app-container {
   text-align: left;
   padding: 0 50px;
-  padding-top: 100px;
   transition: background-color ease-in 0.5s;
 }
 
@@ -91,6 +90,7 @@ export default {
   text-align: right;
   font-size: 45px;
   cursor: pointer;
+  padding-top: 100px;
 }
 
 p {
@@ -102,8 +102,8 @@ p {
 }
 
 @media only screen and (max-width: 600px) {
-  #app-container {
-    padding: 0 20px
+  .app-container {
+    padding: 0 20px;
   }
 }
 
