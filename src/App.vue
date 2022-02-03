@@ -91,6 +91,7 @@ export default {
   font-size: 45px;
   cursor: pointer;
   padding-top: 100px;
+  float: right;
 }
 
 p {
