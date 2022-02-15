@@ -100,6 +100,8 @@ p {
 
 #copyright {
   margin-top: 100px;
+  font-size: 1.3em;
+  font-style: italic;
 }
 
 @media only screen and (max-width: 600px) {

@@ -31,4 +31,10 @@ a:active {
     background-color: none;
 }
 
+@media only screen and (max-width: 900px) {
+    p {
+        margin-bottom: 1em;
+    }
+}
+
 </style>
