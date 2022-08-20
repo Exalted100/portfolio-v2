@@ -1,5 +1,9 @@
 const contacts = [
     {
+        title: "Personal Blog",
+        link: "https://blog.fawazharoun.com"
+    },
+    {
         title: "Twitter",
         link: "https://twitter.com/Exalted100"
     },

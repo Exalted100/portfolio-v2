@@ -3,7 +3,7 @@
     <p class="modeToggle" v-on:click="changeMode">{{ modeIcon }}</p>
     <Title title="Fawaz Haroun" />
     <p>
-      I’m a web developer in Lagos, Nigeria, with a passion for smooth and easy to use UIs. Some things I like to do are reading, writing, drawing (bad art), and learning things that momentarily catch my interest. I strongly believe in growth - and putting yourself in positions that force growth. Much like learning to swim by jumping into water or learning to drive by grabbing a steering wheel, after preparing your best to avoid drowning or crashing. George Brecht said “the whole universe interests me”. I share the sentiment, except that I have realized building things interests me above all.
+      I’m a software engineer in Lagos, Nigeria. Some things I like to do are reading, writing, drawing (bad art), and learning things that momentarily catch my interest (currently Japanese). I strongly believe in growth - and putting yourself in positions that force growth. Much like learning to swim by jumping into water or learning to drive by grabbing a steering wheel, after preparing your best to avoid drowning or crashing. George Brecht said “the whole universe interests me”. I share the sentiment, except that I have realized building things interests me above all.
     </p>
 
     <Title title="Selected Works" />
@@ -12,7 +12,7 @@
     <Title title="Selected Articles" />
     <SelectedList v-for="item in articles" v-bind:item="item" v-bind:key="item.link" />
 
-    <Title title="Contact me" />
+    <Title title="Relevant Links" />
     <Contacts v-for="contact in contacts" v-bind:contact="contact" v-bind:key="contact.link" />
 
     <p id="copyright">

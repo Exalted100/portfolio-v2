@@ -24,11 +24,6 @@ const works = [
         link: "https://github-query-app.netlify.app/",
         description: "The Github Query App accepts a github username. It will display an error if the github username is wrong. If it is a correct username, it displays a profile with the user's data."
     },
-    {
-        title: "06. Robo Friends",
-        link: "https://vue-robo-friends.netlify.app/",
-        description: "Robo Friends is a Vue web app that leverages the Robo Hash API. It has a search functionality to filter through the robots by name."
-    }
 ]
 
 export default works
