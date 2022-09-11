@@ -3,38 +3,67 @@
     <p class="modeToggle" v-on:click="changeMode">{{ modeIcon }}</p>
     <Title title="Fawaz Haroun" />
     <p>
-      I’m a software engineer in Lagos, Nigeria. Some things I like to do are reading, writing, drawing (bad art), and learning things that momentarily catch my interest (currently Japanese). I strongly believe in growth - and putting yourself in positions that force growth. Much like learning to swim by jumping into water or learning to drive by grabbing a steering wheel, after preparing your best to avoid drowning or crashing. George Brecht said “the whole universe interests me”. I share the sentiment, except that I have realized building things interests me above all.
+      I’m a software engineer in Lagos, Nigeria. Most of my expeirence is in web
+      engineering, building applications on both the frontend and backend. I
+      have a strong interest in finance and law (and have a background in law).
+      Much of my experience as a software engineer has also been building
+      financial products, especially around digital lending and business
+      banking. Sometimes, I write about technical concepts and tools on
+      <a
+        href="https://blog.fawazharoun.com"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="referrals"
+        >my blog</a
+      >. Some things I like to do are reading, writing, and
+      learning things that momentarily catch my interest (currently Japanese). I
+      strongly believe in growth - and putting yourself in positions that force
+      growth. Much like learning to swim by jumping into water or learning to
+      drive by grabbing a steering wheel, after preparing your best to avoid
+      drowning or crashing. George Brecht said “the whole universe interests
+      me”. I share the sentiment, except that I have realized building things
+      interests me above all.
     </p>
 
     <Title title="Selected Works" />
-    <SelectedList v-for="item in works" v-bind:item="item" v-bind:key="item.link" />
+    <SelectedList
+      v-for="item in works"
+      v-bind:item="item"
+      v-bind:key="item.link"
+    />
 
     <Title title="Selected Articles" />
-    <SelectedList v-for="item in articles" v-bind:item="item" v-bind:key="item.link" />
+    <SelectedList
+      v-for="item in articles"
+      v-bind:item="item"
+      v-bind:key="item.link"
+    />
 
     <Title title="Relevant Links" />
-    <Contacts v-for="contact in contacts" v-bind:contact="contact" v-bind:key="contact.link" />
+    <Contacts
+      v-for="contact in contacts"
+      v-bind:contact="contact"
+      v-bind:key="contact.link"
+    />
 
-    <p id="copyright">
-      &#169; Fawaz Haroun, {{ new Date().getFullYear() }}
-    </p>
+    <p id="copyright">&#169; Fawaz Haroun, {{ new Date().getFullYear() }}</p>
   </div>
 </template>
 
 <script>
-import Title from './components/Title.vue'
-import SelectedList from './components/SelectedList.vue'
-import Contacts from "./components/Contacts.vue"
-import contacts from "./assets/contacts"
-import works from "./assets/works"
-import articles from "./assets/articles"
+import Title from "./components/Title.vue";
+import SelectedList from "./components/SelectedList.vue";
+import Contacts from "./components/Contacts.vue";
+import contacts from "./assets/contacts";
+import works from "./assets/works";
+import articles from "./assets/articles";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
     Title,
     SelectedList,
-    Contacts
+    Contacts,
   },
   data() {
     return {
@@ -43,22 +72,33 @@ export default {
       contacts: contacts,
       modeObject: {
         backgroundColor: "#FFD2A8",
-        color: "black"
+        color: "black",
       },
-      modeIcon: "🌚"
-    }
+      modeIcon: "🌚",
+    };
   },
   methods: {
     changeMode() {
-      JSON.stringify(this.modeObject) === JSON.stringify({backgroundColor: "#FFD2A8", color: "black"}) ? this.modeIcon = "🌝" : this.modeIcon = "🌚"
-      JSON.stringify(this.modeObject) === JSON.stringify({backgroundColor: "#FFD2A8", color: "black"}) ? this.modeObject = {backgroundColor: "rgb(32, 32, 32)", color: "rgb(226, 226, 226)"} : this.modeObject = {backgroundColor: "#FFD2A8", color: "black"}
-    }
-  }
-}
+      JSON.stringify(this.modeObject) ===
+      JSON.stringify({ backgroundColor: "#FFD2A8", color: "black" })
+        ? (this.modeIcon = "🌝")
+        : (this.modeIcon = "🌚");
+      JSON.stringify(this.modeObject) ===
+      JSON.stringify({ backgroundColor: "#FFD2A8", color: "black" })
+        ? (this.modeObject = {
+            backgroundColor: "rgb(32, 32, 32)",
+            color: "rgb(226, 226, 226)",
+          })
+        : (this.modeObject = { backgroundColor: "#FFD2A8", color: "black" });
+    },
+  },
+};
 </script>
 
 <style>
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   box-sizing: border-box;
   padding: 0;
@@ -66,12 +106,14 @@ export default {
   max-width: 100%;
 }
 
-@font-face { font-family: Raleway; 
-  src: url('./assets/Raleway/static/Raleway-Regular.ttf'); 
+@font-face {
+  font-family: Raleway;
+  src: url("./assets/Raleway/static/Raleway-Regular.ttf");
 }
 
-@font-face { font-family: Raleway-Bold; 
-  src: url('./assets/Raleway/static/Raleway-Bold.ttf'); 
+@font-face {
+  font-family: Raleway-Bold;
+  src: url("./assets/Raleway/static/Raleway-Bold.ttf");
 }
 
 #app {
@@ -111,17 +153,17 @@ p {
 }
 
 .referrals {
-    color: black;
-    text-decoration: none;
-    background: linear-gradient(180deg, #FFD2A8 50%, #00FFFF 50%);
-    transition: ease-in background-color 0.4s;
+  color: black;
+  text-decoration: none;
+  background: linear-gradient(180deg, #ffd2a8 50%, #00ffff 50%);
+  transition: ease-in background-color 0.4s;
 }
 
 .referrals:hover {
-    background: #00FFFF;
+  background: #00ffff;
 }
 
 .referrals:active {
-    background-color: none;
+  background-color: none;
 }
 </style>
