@@ -3,10 +3,10 @@
     <p class="modeToggle" v-on:click="changeMode">{{ modeIcon }}</p>
     <Title title="Fawaz Haroun" />
     <p>
-      I’m a software engineer in Lagos, Nigeria. Most of my expeirence is in web
-      engineering, building applications on both the frontend and backend. I
+      I’m a software engineer in Lagos, Nigeria. Most of my experience lies in
+      web engineering, building applications on both the frontend and backend. I
       have a strong interest in finance and law (and have a background in law).
-      Much of my experience as a software engineer has also been building
+      Much of my experience as a software engineer has also included building
       financial products, especially around digital lending and business
       banking. Sometimes, I write about technical concepts and tools on
       <a
@@ -15,14 +15,14 @@
         rel="noopener noreferrer"
         class="referrals"
         >my blog</a
-      >. Some things I like to do are reading, writing, and
-      learning things that momentarily catch my interest (currently Japanese). I
-      strongly believe in growth - and putting yourself in positions that force
-      growth. Much like learning to swim by jumping into water or learning to
-      drive by grabbing a steering wheel, after preparing your best to avoid
-      drowning or crashing. George Brecht said “the whole universe interests
-      me”. I share the sentiment, except that I have realized building things
-      interests me above all.
+      >. Some things I like to do are reading, writing, and learning things that
+      momentarily catch my interest (currently Japanese). I strongly believe in
+      growth - and putting yourself in positions that force growth. Much like
+      learning to swim by jumping into water or learning to drive by grabbing a
+      steering wheel, after preparing your best to avoid drowning or crashing.
+      George Brecht said “the whole universe interests me”. I share the
+      sentiment, except that I have realized building things interests me above
+      all.
     </p>
 
     <Title title="Selected Works" />
