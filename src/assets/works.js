@@ -9,7 +9,7 @@ const works = [
     title: "02. Cryptocurrency Chart",
     link: "https://crypto.fawazharoun.com",
     description:
-      "A data visualization project, built with Apex Charts, React, and tghe Coin Gecko API, that shows the price history of cryptocurrencies across a period of days. The supported coins include Bitcoin, Litecoin, Ethereum, and Binance Coin. It also has functionality to choose the number of days the data should span, the last day the chart should show, and the coin for the data.",
+      "A data visualization project, built with Apex Charts, React, and the Coin Gecko API, that shows the price history of cryptocurrencies across a period of days. The supported coins include Bitcoin, Litecoin, Ethereum, and Binance Coin. It also has functionality to choose the number of days the data should span, the last day the chart should show, and the coin for the data.",
   },
   {
     title: "03. URL Shortener Service",
