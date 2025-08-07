@@ -1,18 +1,18 @@
 const articles = [
     {
-        title: "01. Caching - Candy in a Drawer",
+        title: "01. API Performance Monitoring with Prometheus and Grafana",
+        link: "https://youtu.be/KC1x8JLKwxw?si=GIjO8byNHkdReqHV",
+        description: "A talk on monitoring API performance with Prometheus and Grafana. Delivered at API Conf 2024, Lagos, Nigeria."
+    },
+    {
+        title: "02. A Short Note on Resilient Systems",
+        link: "https://blog.fawazharoun.com/resilient-systems",
+        description: "A short note on resilient systems."
+    },
+    {
+        title: "03. Caching - Candy in a Drawer",
         link: "https://blog.fawazharoun.com/caching-basics",
         description: "A personal reflection on caching."
-    },
-    {
-        title: "02. WAGMI: A Promise",
-        link: "https://dropoflife.substack.com/p/wagmi-a-promise",
-        description: "An overview of blockchain technology, its pros, and its cons."
-    },
-    {
-        title: "03. Land Registry? Blockchain? NFT? Colour me sold",
-        link: "https://dropoflife.substack.com/p/land-registry-blockchain-nft-colour",
-        description: "Beyond art, music, and ENS, NFTs and blockchain technology can be applied to various sectors and industries. This essay examines how a faulty land registry system can leverage Blockchain and NFT technology to create a better system of land ownership."
     },
 ]
 

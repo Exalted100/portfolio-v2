@@ -3,12 +3,10 @@
     <p class="modeToggle" v-on:click="changeMode">{{ modeIcon }}</p>
     <Title title="Fawaz Haroun" />
     <p>
-      I’m a software engineer in Lagos, Nigeria. Most of my experience lies in
-      web engineering, building applications on both the frontend and backend. I
-      have a strong interest in finance and law (and have a background in law).
-      Much of my experience as a software engineer has also included building
-      financial products, especially around digital lending and business
-      banking. Sometimes, I write about technical concepts and tools on
+      I'm a software engineer in Glasgow, Scotland. I have a strong interest in
+      finance and technology, while being adaptable to solving interesting problems.
+      Much of my experience as a software engineer has included building
+      financial products and web applications. Sometimes, I write about technical concepts and tools on
       <a
         href="https://blog.fawazharoun.com"
         target="_blank"
@@ -16,14 +14,21 @@
         class="referrals"
         >my blog</a
       >. Some things I like to do are reading, writing, and learning things that
-      momentarily catch my interest (currently Japanese). I strongly believe in
+      momentarily catch my interest. I strongly believe in
       growth - and putting yourself in positions that force growth. Much like
       learning to swim by jumping into water or learning to drive by grabbing a
       steering wheel, after preparing your best to avoid drowning or crashing.
-      George Brecht said “the whole universe interests me”. I share the
+      George Brecht said "the whole universe interests me". I share the
       sentiment, except that I have realized building things interests me above
       all.
     </p>
+
+    <Title title="Previous Employment" />
+    <SelectedList
+      v-for="item in jobs"
+      v-bind:item="item"
+      v-bind:key="item.link"
+    />
 
     <Title title="Selected Works" />
     <SelectedList
@@ -32,7 +37,7 @@
       v-bind:key="item.link"
     />
 
-    <Title title="Selected Articles" />
+    <Title title="Selected Articles and Talks" />
     <SelectedList
       v-for="item in articles"
       v-bind:item="item"
@@ -56,6 +61,7 @@ import SelectedList from "./components/SelectedList.vue";
 import Contacts from "./components/Contacts.vue";
 import contacts from "./assets/contacts";
 import works from "./assets/works";
+import jobs from "./assets/jobs";
 import articles from "./assets/articles";
 
 export default {
@@ -68,6 +74,7 @@ export default {
   data() {
     return {
       works: works,
+      jobs: jobs,
       articles: articles,
       contacts: contacts,
       modeObject: {
