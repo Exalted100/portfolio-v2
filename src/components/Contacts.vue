@@ -4,7 +4,7 @@
 
 <script>
 export default {
-    name: "Contacts",
+    name: "ContactLink",
     props: [ "contact" ]
 }
 </script>

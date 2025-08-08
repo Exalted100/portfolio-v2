@@ -1,7 +1,7 @@
 <template>
   <div class="app-container" v-bind:style="modeObject">
     <p class="modeToggle" v-on:click="changeMode">{{ modeIcon }}</p>
-    <Title title="Fawaz Haroun" />
+    <SectionTitle title="Fawaz Haroun" />
     <p>
       I'm a software engineer in Glasgow, Scotland. I have a strong interest in
       finance and technology, while being adaptable to solving interesting problems.
@@ -23,29 +23,29 @@
       all.
     </p>
 
-    <Title title="Previous Employment" />
+    <SectionTitle title="Previous Employment" />
     <SelectedList
       v-for="item in jobs"
       v-bind:item="item"
       v-bind:key="item.link"
     />
 
-    <Title title="Selected Works" />
+    <SectionTitle title="Selected Works" />
     <SelectedList
       v-for="item in works"
       v-bind:item="item"
       v-bind:key="item.link"
     />
 
-    <Title title="Selected Articles and Talks" />
+    <SectionTitle title="Selected Articles and Talks" />
     <SelectedList
       v-for="item in articles"
       v-bind:item="item"
       v-bind:key="item.link"
     />
 
-    <Title title="Relevant Links" />
-    <Contacts
+    <SectionTitle title="Relevant Links" />
+    <ContactLink
       v-for="contact in contacts"
       v-bind:contact="contact"
       v-bind:key="contact.link"
@@ -56,9 +56,9 @@
 </template>
 
 <script>
-import Title from "./components/Title.vue";
+import SectionTitle from "./components/Title.vue";
 import SelectedList from "./components/SelectedList.vue";
-import Contacts from "./components/Contacts.vue";
+import ContactLink from "./components/Contacts.vue";
 import contacts from "./assets/contacts";
 import works from "./assets/works";
 import jobs from "./assets/jobs";
@@ -67,9 +67,9 @@ import articles from "./assets/articles";
 export default {
   name: "App",
   components: {
-    Title,
+    SectionTitle,
     SelectedList,
-    Contacts,
+    ContactLink,
   },
   data() {
     return {
